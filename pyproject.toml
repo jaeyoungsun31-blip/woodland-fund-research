@@ -1,0 +1,50 @@
+[project]
+name = "woodland"
+version = "0.1.0"
+description = "The Woodland Fund — systematic ETF strategy research pipeline with a walk-forward retrain loop"
+requires-python = ">=3.11"
+dependencies = [
+    "pandas>=2.2",
+    "numpy>=1.26",
+    "pyarrow>=15",
+    "requests>=2.31",
+    "pyyaml>=6",
+    "matplotlib>=3.8",
+]
+
+[project.optional-dependencies]
+crosscheck = ["yfinance>=0.2.40"]
+# External-validation datasets published as spreadsheets (AQR factor library).
+# Optional: the core pipeline never reads xlsx.
+external = ["openpyxl>=3.1"]
+dev = ["pytest>=8", "ruff>=0.11", "mypy>=1.15", "pandas-stubs>=2.2", "types-PyYAML>=6.0"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["woodland"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.mypy]
+files = ["woodland", "scripts"]
+python_version = "3.12"
+check_untyped_defs = true
+disallow_untyped_defs = true
+warn_return_any = true
+warn_unused_ignores = true
+no_implicit_optional = true
+
+[[tool.mypy.overrides]]
+module = ["yfinance"]
+ignore_missing_imports = true

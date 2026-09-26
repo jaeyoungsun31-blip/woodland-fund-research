@@ -1,0 +1,310 @@
+[
+  {
+    "split": 0,
+    "arm": "penalized",
+    "alpha": 0.01,
+    "lam": 8.0,
+    "train_score": 0.6772682967110265
+  },
+  {
+    "split": 0,
+    "arm": "ridge",
+    "alpha": 0.01,
+    "lam": 0.0,
+    "train_score": 0.6662186681339883
+  },
+  {
+    "split": 1,
+    "arm": "penalized",
+    "alpha": 1.0,
+    "lam": 8.0,
+    "train_score": 0.7685230123054801
+  },
+  {
+    "split": 1,
+    "arm": "ridge",
+    "alpha": 0.01,
+    "lam": 0.0,
+    "train_score": 0.7605551875706273
+  },
+  {
+    "split": 2,
+    "arm": "penalized",
+    "alpha": 1.0,
+    "lam": 0.5,
+    "train_score": 1.091311342413476
+  },
+  {
+    "split": 2,
+    "arm": "ridge",
+    "alpha": 0.01,
+    "lam": 0.0,
+    "train_score": 1.0918300750301442
+  },
+  {
+    "split": 3,
+    "arm": "penalized",
+    "alpha": 0.01,
+    "lam": 2.0,
+    "train_score": 1.4048367582887566
+  },
+  {
+    "split": 3,
+    "arm": "ridge",
+    "alpha": 0.01,
+    "lam": 0.0,
+    "train_score": 1.4056254630944276
+  },
+  {
+    "split": 4,
+    "arm": "penalized",
+    "alpha": 0.01,
+    "lam": 0.5,
+    "train_score": 1.3568663530734912
+  },
+  {
+    "split": 4,
+    "arm": "ridge",
+    "alpha": 0.01,
+    "lam": 0.0,
+    "train_score": 1.357872826762961
+  },
+  {
+    "split": 5,
+    "arm": "penalized",
+    "alpha": 10.0,
+    "lam": 8.0,
+    "train_score": 1.2728768440773204
+  },
+  {
+    "split": 5,
+    "arm": "ridge",
+    "alpha": 10.0,
+    "lam": 0.0,
+    "train_score": 1.274811208456316
+  },
+  {
+    "split": 6,
+    "arm": "penalized",
+    "alpha": 10.0,
+    "lam": 8.0,
+    "train_score": 1.6431506726938219
+  },
+  {
+    "split": 6,
+    "arm": "ridge",
+    "alpha": 0.01,
+    "lam": 0.0,
+    "train_score": 1.6416704354858123
+  },
+  {
+    "split": 7,
+    "arm": "penalized",
+    "alpha": 0.01,
+    "lam": 2.0,
+    "train_score": 1.4609009872794971
+  },
+  {
+    "split": 7,
+    "arm": "ridge",
+    "alpha": 10.0,
+    "lam": 0.0,
+    "train_score": 1.4619452366034975
+  },
+  {
+    "split": 8,
+    "arm": "penalized",
+    "alpha": 0.01,
+    "lam": 8.0,
+    "train_score": 1.2142528664144376
+  },
+  {
+    "split": 8,
+    "arm": "ridge",
+    "alpha": 0.01,
+    "lam": 0.0,
+    "train_score": 1.2097011300284526
+  },
+  {
+    "split": 9,
+    "arm": "penalized",
+    "alpha": 0.01,
+    "lam": 8.0,
+    "train_score": 1.214630152178537
+  },
+  {
+    "split": 9,
+    "arm": "ridge",
+    "alpha": 0.01,
+    "lam": 0.0,
+    "train_score": 1.2135342464946475
+  },
+  {
+    "split": 10,
+    "arm": "penalized",
+    "alpha": 0.01,
+    "lam": 0.5,
+    "train_score": 1.2585555408113018
+  },
+  {
+    "split": 10,
+    "arm": "ridge",
+    "alpha": 0.01,
+    "lam": 0.0,
+    "train_score": 1.2578055277265574
+  },
+  {
+    "split": 11,
+    "arm": "penalized",
+    "alpha": 0.01,
+    "lam": 0.5,
+    "train_score": 1.1527655607611902
+  },
+  {
+    "split": 11,
+    "arm": "ridge",
+    "alpha": 0.01,
+    "lam": 0.0,
+    "train_score": 1.1458976422980491
+  },
+  {
+    "split": 12,
+    "arm": "penalized",
+    "alpha": 10.0,
+    "lam": 2.0,
+    "train_score": 1.0293158572836183
+  },
+  {
+    "split": 12,
+    "arm": "ridge",
+    "alpha": 0.01,
+    "lam": 0.0,
+    "train_score": 1.0066238764852444
+  },
+  {
+    "split": 13,
+    "arm": "penalized",
+    "alpha": 0.01,
+    "lam": 0.5,
+    "train_score": 1.169057517155045
+  },
+  {
+    "split": 13,
+    "arm": "ridge",
+    "alpha": 10.0,
+    "lam": 0.0,
+    "train_score": 1.166551010684245
+  },
+  {
+    "split": 14,
+    "arm": "penalized",
+    "alpha": 0.01,
+    "lam": 2.0,
+    "train_score": 1.3475404505099406
+  },
+  {
+    "split": 14,
+    "arm": "ridge",
+    "alpha": 0.01,
+    "lam": 0.0,
+    "train_score": 1.312379696650815
+  },
+  {
+    "split": 15,
+    "arm": "penalized",
+    "alpha": 0.01,
+    "lam": 0.5,
+    "train_score": 0.927209068718636
+  },
+  {
+    "split": 15,
+    "arm": "ridge",
+    "alpha": 0.01,
+    "lam": 0.0,
+    "train_score": 0.9194112872598711
+  },
+  {
+    "split": 16,
+    "arm": "penalized",
+    "alpha": 0.01,
+    "lam": 8.0,
+    "train_score": 0.9113443112301236
+  },
+  {
+    "split": 16,
+    "arm": "ridge",
+    "alpha": 0.01,
+    "lam": 0.0,
+    "train_score": 0.8909814875366825
+  },
+  {
+    "split": 17,
+    "arm": "penalized",
+    "alpha": 0.01,
+    "lam": 8.0,
+    "train_score": 0.6392760501263275
+  },
+  {
+    "split": 17,
+    "arm": "ridge",
+    "alpha": 10.0,
+    "lam": 0.0,
+    "train_score": 0.6137278370359993
+  },
+  {
+    "split": 18,
+    "arm": "penalized",
+    "alpha": 0.01,
+    "lam": 0.5,
+    "train_score": 0.5699117025002797
+  },
+  {
+    "split": 18,
+    "arm": "ridge",
+    "alpha": 0.01,
+    "lam": 0.0,
+    "train_score": 0.5668244309938579
+  },
+  {
+    "split": 19,
+    "arm": "penalized",
+    "alpha": 0.01,
+    "lam": 0.5,
+    "train_score": 0.3242965397994954
+  },
+  {
+    "split": 19,
+    "arm": "ridge",
+    "alpha": 10.0,
+    "lam": 0.0,
+    "train_score": 0.3269075299680431
+  },
+  {
+    "split": 20,
+    "arm": "penalized",
+    "alpha": 0.01,
+    "lam": 8.0,
+    "train_score": 0.2704662863164471
+  },
+  {
+    "split": 20,
+    "arm": "ridge",
+    "alpha": 0.01,
+    "lam": 0.0,
+    "train_score": 0.26055443931572464
+  },
+  {
+    "split": 21,
+    "arm": "penalized",
+    "alpha": 0.01,
+    "lam": 8.0,
+    "train_score": 0.4013063206276848
+  },
+  {
+    "split": 21,
+    "arm": "ridge",
+    "alpha": 0.01,
+    "lam": 0.0,
+    "train_score": 0.37891054860819495
+  }
+]

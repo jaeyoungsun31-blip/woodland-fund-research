@@ -1,0 +1,872 @@
+{
+  "status": "completed",
+  "run_id": "f37f347a-72ea-47fa-8981-dbec6083c529",
+  "anchor_ruling": {
+    "source": "journal/2026-09-08-planning-decision-etf-anchor-tolerance.md",
+    "decision": "accept-under-declared-tolerance",
+    "tolerance": "1e-3"
+  },
+  "cost_bps": [
+    0,
+    5,
+    10,
+    25
+  ],
+  "arms": [
+    {
+      "arm": "dual-A",
+      "status": "completed",
+      "snapshot": {
+        "as_of": "2026-09-04",
+        "sha256": "4c6a36b8c1e52f2cc50dca437ff4d892dc21a87c96b18ff08de70eb85e84d901",
+        "field": "adj_close",
+        "hash_format": "sorted date-index CSV; ordered config columns; %.17g; NA; LF; UTF-8",
+        "first": "1998-12-22",
+        "last": "2026-09-04",
+        "rows": 6968,
+        "columns": [
+          "XLB",
+          "XLE",
+          "XLF",
+          "XLI",
+          "XLK",
+          "XLP",
+          "XLU",
+          "XLV",
+          "XLY",
+          "XLRE",
+          "XLC",
+          "SPY",
+          "QQQ",
+          "IWM",
+          "EFA",
+          "EEM",
+          "TLT",
+          "IEF",
+          "GLD",
+          "DBC"
+        ]
+      },
+      "reporting_block": {
+        "refused_constituents": 213,
+        "refused_symbol_years": 1574,
+        "excluded_defects": [
+          "CTX",
+          "DF",
+          "IGT",
+          "COG"
+        ],
+        "substitutions": {
+          "SYMC": "GEN",
+          "NLOK": "GEN",
+          "WIN": "WINMQ",
+          "KRFT": "KHC",
+          "MMC": "MRSH"
+        },
+        "no_usable_bars": [
+          "FCPT"
+        ],
+        "a2": "SIGNED convention; treatment not applied to this panel. No imputed terminal returns or Case 2 adverse bound."
+      },
+      "mask": {
+        "declared_arm_panel": 1
+      },
+      "minimum_membership_eligible": 64,
+      "minimum_feature_eligible_on_oos": 85,
+      "portfolio_days_over_10pct_excluded": 0,
+      "portfolio_days": 5234,
+      "risk_free": {
+        "source_first": "1926-07-02",
+        "source_last": "2026-06-30",
+        "calendar_first": "1999-01-06",
+        "calendar_last": "2026-06-30",
+        "n_bars": 6736,
+        "n_carried_forward": 0,
+        "n_before_source_zeroed": 0,
+        "mean_annualized": 0.01992880047505704
+      },
+      "C1": false,
+      "C2": false,
+      "C3": false,
+      "inference": {
+        "C1": {
+          "name_a": "A",
+          "name_b": "B",
+          "sharpe_a": 0.40671732150623385,
+          "sharpe_b": 0.40295876842489403,
+          "difference": 0.0037585530813398216,
+          "ci_low": -0.02216109829917231,
+          "ci_high": 0.0274734260545655,
+          "p_value": 0.754024597540246,
+          "n_obs": 5234,
+          "method": "stationary block bootstrap (Politis-Romano)",
+          "n_resamples": 10000,
+          "block_length": 21,
+          "standard_error": null
+        },
+        "C2": {
+          "name_a": "A",
+          "name_b": "B",
+          "sharpe_a": 0.35905949616018157,
+          "sharpe_b": 0.4423819565146495,
+          "difference": -0.08332246035446794,
+          "ci_low": -0.3200931947771915,
+          "ci_high": 0.14303321077804101,
+          "p_value": 0.4801519848015198,
+          "n_obs": 5234,
+          "method": "stationary block bootstrap (Politis-Romano)",
+          "n_resamples": 10000,
+          "block_length": 21,
+          "standard_error": null
+        }
+      },
+      "C3_note": "Same OOS dates; entirely post1980, no independent era check.",
+      "dsr": {
+        "sharpe_annual": 0.40671732150623247,
+        "sr0_annual": 0.8566409641201803,
+        "dsr": 0.020037742178815376,
+        "psr_vs_zero": 0.9682605770440516,
+        "n_obs": 5234,
+        "n_trials": 352,
+        "trial_sharpe_sd_annual": 0.2908397927007624,
+        "trial_sharpe_min_annual": 0.09325558401862241,
+        "trial_sharpe_max_annual": 1.1564032710942143,
+        "trial_sharpe_spread_annual": 1.0631476870755918,
+        "skew": 0.19659407057571143,
+        "excess_kurtosis": 12.754924103970032,
+        "years": 20.76984126984127
+      },
+      "trials": 352,
+      "distinct_cells": 16
+    },
+    {
+      "arm": "dual-B",
+      "status": "completed",
+      "snapshot": {
+        "as_of": "2026-09-04",
+        "sha256": "4c6a36b8c1e52f2cc50dca437ff4d892dc21a87c96b18ff08de70eb85e84d901",
+        "field": "adj_close",
+        "hash_format": "sorted date-index CSV; ordered config columns; %.17g; NA; LF; UTF-8",
+        "first": "1998-12-22",
+        "last": "2026-09-04",
+        "rows": 6968,
+        "columns": [
+          "XLB",
+          "XLE",
+          "XLF",
+          "XLI",
+          "XLK",
+          "XLP",
+          "XLU",
+          "XLV",
+          "XLY",
+          "XLRE",
+          "XLC",
+          "SPY",
+          "QQQ",
+          "IWM",
+          "EFA",
+          "EEM",
+          "TLT",
+          "IEF",
+          "GLD",
+          "DBC"
+        ]
+      },
+      "reporting_block": {
+        "refused_constituents": 213,
+        "refused_symbol_years": 1574,
+        "excluded_defects": [
+          "CTX",
+          "DF",
+          "IGT",
+          "COG"
+        ],
+        "substitutions": {
+          "SYMC": "GEN",
+          "NLOK": "GEN",
+          "WIN": "WINMQ",
+          "KRFT": "KHC",
+          "MMC": "MRSH"
+        },
+        "no_usable_bars": [
+          "FCPT"
+        ],
+        "a2": "SIGNED convention; treatment not applied to this panel. No imputed terminal returns or Case 2 adverse bound."
+      },
+      "mask": {
+        "declared_arm_panel": 1
+      },
+      "minimum_membership_eligible": 64,
+      "minimum_feature_eligible_on_oos": 85,
+      "portfolio_days_over_10pct_excluded": 0,
+      "portfolio_days": 5234,
+      "risk_free": {
+        "source_first": "1926-07-02",
+        "source_last": "2026-06-30",
+        "calendar_first": "1999-01-06",
+        "calendar_last": "2026-06-30",
+        "n_bars": 6736,
+        "n_carried_forward": 0,
+        "n_before_source_zeroed": 0,
+        "mean_annualized": 0.01992880047505704
+      },
+      "C1": false,
+      "C2": false,
+      "C3": false,
+      "inference": {
+        "C1": {
+          "name_a": "A",
+          "name_b": "B",
+          "sharpe_a": 0.33564537861767985,
+          "sharpe_b": 0.3357650738583269,
+          "difference": -0.00011969524064703307,
+          "ci_low": -0.027750735710315257,
+          "ci_high": 0.02390822188802732,
+          "p_value": 0.991000899910009,
+          "n_obs": 5234,
+          "method": "stationary block bootstrap (Politis-Romano)",
+          "n_resamples": 10000,
+          "block_length": 21,
+          "standard_error": null
+        },
+        "C2": {
+          "name_a": "A",
+          "name_b": "B",
+          "sharpe_a": 0.2883021420524327,
+          "sharpe_b": 0.4003374424026599,
+          "difference": -0.11203530035022718,
+          "ci_low": -0.35670426976807607,
+          "ci_high": 0.11925144452384205,
+          "p_value": 0.35406459354064596,
+          "n_obs": 5234,
+          "method": "stationary block bootstrap (Politis-Romano)",
+          "n_resamples": 10000,
+          "block_length": 21,
+          "standard_error": null
+        }
+      },
+      "C3_note": "Same OOS dates; entirely post1980, no independent era check.",
+      "dsr": {
+        "sharpe_annual": 0.3356453786176797,
+        "sr0_annual": 0.8691514957119182,
+        "dsr": 0.007470633864258169,
+        "psr_vs_zero": 0.9371374668209994,
+        "n_obs": 5234,
+        "n_trials": 352,
+        "trial_sharpe_sd_annual": 0.29508726692522275,
+        "trial_sharpe_min_annual": 0.09325558401862241,
+        "trial_sharpe_max_annual": 1.0916194008257056,
+        "trial_sharpe_spread_annual": 0.9983638168070832,
+        "skew": 0.17910528446834192,
+        "excess_kurtosis": 12.525877251140153,
+        "years": 20.76984126984127
+      },
+      "trials": 352,
+      "distinct_cells": 16
+    },
+    {
+      "arm": "dual-C",
+      "status": "completed",
+      "snapshot": {
+        "as_of": "2026-09-04",
+        "sha256": "4c6a36b8c1e52f2cc50dca437ff4d892dc21a87c96b18ff08de70eb85e84d901",
+        "field": "adj_close",
+        "hash_format": "sorted date-index CSV; ordered config columns; %.17g; NA; LF; UTF-8",
+        "first": "1998-12-22",
+        "last": "2026-09-04",
+        "rows": 6968,
+        "columns": [
+          "XLB",
+          "XLE",
+          "XLF",
+          "XLI",
+          "XLK",
+          "XLP",
+          "XLU",
+          "XLV",
+          "XLY",
+          "XLRE",
+          "XLC",
+          "SPY",
+          "QQQ",
+          "IWM",
+          "EFA",
+          "EEM",
+          "TLT",
+          "IEF",
+          "GLD",
+          "DBC"
+        ]
+      },
+      "reporting_block": {
+        "refused_constituents": 213,
+        "refused_symbol_years": 1574,
+        "excluded_defects": [
+          "CTX",
+          "DF",
+          "IGT",
+          "COG"
+        ],
+        "substitutions": {
+          "SYMC": "GEN",
+          "NLOK": "GEN",
+          "WIN": "WINMQ",
+          "KRFT": "KHC",
+          "MMC": "MRSH"
+        },
+        "no_usable_bars": [
+          "FCPT"
+        ],
+        "a2": "SIGNED convention; treatment not applied to this panel. No imputed terminal returns or Case 2 adverse bound."
+      },
+      "mask": {
+        "declared_arm_panel": 1
+      },
+      "minimum_membership_eligible": 347,
+      "minimum_feature_eligible_on_oos": 383,
+      "portfolio_days_over_10pct_excluded": 0,
+      "portfolio_days": 5234,
+      "risk_free": {
+        "source_first": "1926-07-02",
+        "source_last": "2026-06-30",
+        "calendar_first": "1999-01-06",
+        "calendar_last": "2026-06-30",
+        "n_bars": 6736,
+        "n_carried_forward": 0,
+        "n_before_source_zeroed": 0,
+        "mean_annualized": 0.01992880047505704
+      },
+      "C1": false,
+      "C2": false,
+      "C3": false,
+      "inference": {
+        "C1": {
+          "name_a": "A",
+          "name_b": "B",
+          "sharpe_a": 0.8587480593501731,
+          "sharpe_b": 0.8580331748059029,
+          "difference": 0.0007148845442701557,
+          "ci_low": -0.0022043932531422613,
+          "ci_high": 0.0036261915866660655,
+          "p_value": 0.6083391660833917,
+          "n_obs": 5234,
+          "method": "stationary block bootstrap (Politis-Romano)",
+          "n_resamples": 10000,
+          "block_length": 21,
+          "standard_error": null
+        },
+        "C2": {
+          "name_a": "A",
+          "name_b": "B",
+          "sharpe_a": 0.8512307381130992,
+          "sharpe_b": 0.7447810153021694,
+          "difference": 0.10644972281092979,
+          "ci_low": -0.008790704574952716,
+          "ci_high": 0.26027315767919623,
+          "p_value": 0.11408859114088592,
+          "n_obs": 5234,
+          "method": "stationary block bootstrap (Politis-Romano)",
+          "n_resamples": 10000,
+          "block_length": 21,
+          "standard_error": null
+        }
+      },
+      "C3_note": "Same OOS dates; entirely post1980, no independent era check.",
+      "dsr": {
+        "sharpe_annual": 0.8587480593501716,
+        "sr0_annual": 1.1254925410215952,
+        "dsr": 0.06273398492810922,
+        "psr_vs_zero": 0.9999995946608271,
+        "n_obs": 5234,
+        "n_trials": 352,
+        "trial_sharpe_sd_annual": 0.3821180996792163,
+        "trial_sharpe_min_annual": 0.2568672460566899,
+        "trial_sharpe_max_annual": 1.6431506726938219,
+        "trial_sharpe_spread_annual": 1.386283426637132,
+        "skew": 8.42005943678286,
+        "excess_kurtosis": 113.98053349110029,
+        "years": 20.76984126984127
+      },
+      "trials": 352,
+      "distinct_cells": 16
+    },
+    {
+      "arm": "dual-D",
+      "status": "completed",
+      "snapshot": {
+        "as_of": "2026-09-04",
+        "sha256": "4c6a36b8c1e52f2cc50dca437ff4d892dc21a87c96b18ff08de70eb85e84d901",
+        "field": "adj_close",
+        "hash_format": "sorted date-index CSV; ordered config columns; %.17g; NA; LF; UTF-8",
+        "first": "1998-12-22",
+        "last": "2026-09-04",
+        "rows": 6968,
+        "columns": [
+          "XLB",
+          "XLE",
+          "XLF",
+          "XLI",
+          "XLK",
+          "XLP",
+          "XLU",
+          "XLV",
+          "XLY",
+          "XLRE",
+          "XLC",
+          "SPY",
+          "QQQ",
+          "IWM",
+          "EFA",
+          "EEM",
+          "TLT",
+          "IEF",
+          "GLD",
+          "DBC"
+        ]
+      },
+      "reporting_block": {
+        "refused_constituents": 213,
+        "refused_symbol_years": 1574,
+        "excluded_defects": [
+          "CTX",
+          "DF",
+          "IGT",
+          "COG"
+        ],
+        "substitutions": {
+          "SYMC": "GEN",
+          "NLOK": "GEN",
+          "WIN": "WINMQ",
+          "KRFT": "KHC",
+          "MMC": "MRSH"
+        },
+        "no_usable_bars": [
+          "FCPT"
+        ],
+        "a2": "SIGNED convention; treatment not applied to this panel. No imputed terminal returns or Case 2 adverse bound."
+      },
+      "mask": {
+        "declared_arm_panel": 1
+      },
+      "minimum_membership_eligible": 347,
+      "minimum_feature_eligible_on_oos": 383,
+      "portfolio_days_over_10pct_excluded": 0,
+      "portfolio_days": 5234,
+      "risk_free": {
+        "source_first": "1926-07-02",
+        "source_last": "2026-06-30",
+        "calendar_first": "1999-01-06",
+        "calendar_last": "2026-06-30",
+        "n_bars": 6736,
+        "n_carried_forward": 0,
+        "n_before_source_zeroed": 0,
+        "mean_annualized": 0.01992880047505704
+      },
+      "C1": false,
+      "C2": false,
+      "C3": false,
+      "inference": {
+        "C1": {
+          "name_a": "A",
+          "name_b": "B",
+          "sharpe_a": 0.8265402433114671,
+          "sharpe_b": 0.8257280750315434,
+          "difference": 0.0008121682799236973,
+          "ci_low": -0.0017848638300918859,
+          "ci_high": 0.0034978035502067346,
+          "p_value": 0.5228477152284772,
+          "n_obs": 5234,
+          "method": "stationary block bootstrap (Politis-Romano)",
+          "n_resamples": 10000,
+          "block_length": 21,
+          "standard_error": null
+        },
+        "C2": {
+          "name_a": "A",
+          "name_b": "B",
+          "sharpe_a": 0.8188260811904312,
+          "sharpe_b": 0.7237800377886919,
+          "difference": 0.09504604340173928,
+          "ci_low": -0.02877261620816531,
+          "ci_high": 0.25636191142570736,
+          "p_value": 0.18638136186381363,
+          "n_obs": 5234,
+          "method": "stationary block bootstrap (Politis-Romano)",
+          "n_resamples": 10000,
+          "block_length": 21,
+          "standard_error": null
+        }
+      },
+      "C3_note": "Same OOS dates; entirely post1980, no independent era check.",
+      "dsr": {
+        "sharpe_annual": 0.8265402433114654,
+        "sr0_annual": 1.4016751184636504,
+        "dsr": 0.0005293059459198224,
+        "psr_vs_zero": 0.9999987357433596,
+        "n_obs": 5234,
+        "n_trials": 352,
+        "trial_sharpe_sd_annual": 0.4758853685061371,
+        "trial_sharpe_min_annual": -0.03663294945011679,
+        "trial_sharpe_max_annual": 1.6277374713246906,
+        "trial_sharpe_spread_annual": 1.6643704207748073,
+        "skew": 8.406711023717383,
+        "excess_kurtosis": 113.59581518933732,
+        "years": 20.76984126984127
+      },
+      "trials": 352,
+      "distinct_cells": 16
+    }
+  ],
+  "agreement": {
+    "agreement": false,
+    "same_sign": false,
+    "confidence_intervals_overlap": true,
+    "common_confidence_interval": [
+      -0.001784863830091392,
+      0.0034978035502091047
+    ],
+    "inherited_gate_all_arms": false,
+    "promotion_eligible": false
+  },
+  "inference": {
+    "A": {
+      "C1": {
+        "bootstrap": {
+          "name_a": "A",
+          "name_b": "B",
+          "sharpe_a": 0.40671732150623235,
+          "sharpe_b": 0.40295876842489003,
+          "difference": 0.0037585530813423196,
+          "ci_low": -0.022161098299169263,
+          "ci_high": 0.02747342605456672,
+          "p_value": 0.754024597540246,
+          "n_obs": 5234,
+          "method": "stationary block bootstrap (Politis-Romano)",
+          "n_resamples": 10000,
+          "block_length": 21,
+          "standard_error": null
+        },
+        "hac": {
+          "name_a": "A",
+          "name_b": "B",
+          "sharpe_a": 0.4067561804679114,
+          "sharpe_b": 0.4029972682834245,
+          "difference": 0.003758912184486871,
+          "ci_low": -0.022242963259618005,
+          "ci_high": 0.029760787628591745,
+          "p_value": 0.7769173637490856,
+          "n_obs": 5234,
+          "method": "Ledoit-Wolf HAC delta method (Bartlett, 4 lags)",
+          "n_resamples": null,
+          "block_length": null,
+          "standard_error": 0.013266506756861024
+        }
+      },
+      "C2": {
+        "bootstrap": {
+          "name_a": "A",
+          "name_b": "B",
+          "sharpe_a": 0.40671732150623235,
+          "sharpe_b": 0.4423819565146467,
+          "difference": -0.035664635008414325,
+          "ci_low": -0.26954242974707365,
+          "ci_high": 0.18988212463055942,
+          "p_value": 0.7565243475652434,
+          "n_obs": 5234,
+          "method": "stationary block bootstrap (Politis-Romano)",
+          "n_resamples": 10000,
+          "block_length": 21,
+          "standard_error": null
+        },
+        "hac": {
+          "name_a": "A",
+          "name_b": "B",
+          "sharpe_a": 0.4067561804679114,
+          "sharpe_b": 0.4424242229797999,
+          "difference": -0.0356680425118885,
+          "ci_low": -0.28796905039007115,
+          "ci_high": 0.21663296536629417,
+          "p_value": 0.7817171098012221,
+          "n_obs": 5234,
+          "method": "Ledoit-Wolf HAC delta method (Bartlett, 5 lags)",
+          "n_resamples": null,
+          "block_length": null,
+          "standard_error": 0.12872736941510196
+        }
+      },
+      "C3": false
+    },
+    "B": {
+      "C1": {
+        "bootstrap": {
+          "name_a": "A",
+          "name_b": "B",
+          "sharpe_a": 0.33564537861767896,
+          "sharpe_b": 0.33576507385832355,
+          "difference": -0.00011969524064459058,
+          "ci_low": -0.02775073571031433,
+          "ci_high": 0.023908221888025393,
+          "p_value": 0.991000899910009,
+          "n_obs": 5234,
+          "method": "stationary block bootstrap (Politis-Romano)",
+          "n_resamples": 10000,
+          "block_length": 21,
+          "standard_error": null
+        },
+        "hac": {
+          "name_a": "A",
+          "name_b": "B",
+          "sharpe_a": 0.33567744715820064,
+          "sharpe_b": 0.33579715383487907,
+          "difference": -0.00011970667667841914,
+          "ci_low": -0.02747204249435231,
+          "ci_high": 0.027232629140995473,
+          "p_value": 0.9931560507420074,
+          "n_obs": 5234,
+          "method": "Ledoit-Wolf HAC delta method (Bartlett, 4 lags)",
+          "n_resamples": null,
+          "block_length": null,
+          "standard_error": 0.013955529812499434
+        }
+      },
+      "C2": {
+        "bootstrap": {
+          "name_a": "A",
+          "name_b": "B",
+          "sharpe_a": 0.33564537861767896,
+          "sharpe_b": 0.4003374424026574,
+          "difference": -0.06469206378497844,
+          "ci_low": -0.30579548310980703,
+          "ci_high": 0.164113005351336,
+          "p_value": 0.5896410358964104,
+          "n_obs": 5234,
+          "method": "stationary block bootstrap (Politis-Romano)",
+          "n_resamples": 10000,
+          "block_length": 21,
+          "standard_error": null
+        },
+        "hac": {
+          "name_a": "A",
+          "name_b": "B",
+          "sharpe_a": 0.33567744715820064,
+          "sharpe_b": 0.40037569181204125,
+          "difference": -0.06469824465384062,
+          "ci_low": -0.32025275852511814,
+          "ci_high": 0.19085626921743692,
+          "p_value": 0.6197530912669063,
+          "n_obs": 5234,
+          "method": "Ledoit-Wolf HAC delta method (Bartlett, 5 lags)",
+          "n_resamples": null,
+          "block_length": null,
+          "standard_error": 0.13038735195496398
+        }
+      },
+      "C3": false
+    },
+    "C": {
+      "C1": {
+        "bootstrap": {
+          "name_a": "A",
+          "name_b": "B",
+          "sharpe_a": 0.8587480593501717,
+          "sharpe_b": 0.8580331748059014,
+          "difference": 0.0007148845442703777,
+          "ci_low": -0.0022043932531436716,
+          "ci_high": 0.0036261915866660963,
+          "p_value": 0.6083391660833917,
+          "n_obs": 5234,
+          "method": "stationary block bootstrap (Politis-Romano)",
+          "n_resamples": 10000,
+          "block_length": 21,
+          "standard_error": null
+        },
+        "hac": {
+          "name_a": "A",
+          "name_b": "B",
+          "sharpe_a": 0.8588301066497754,
+          "sharpe_b": 0.858115153803349,
+          "difference": 0.000714952846426431,
+          "ci_low": -0.0020149757071221013,
+          "ci_high": 0.0034448813999749636,
+          "p_value": 0.6077390493096166,
+          "n_obs": 5234,
+          "method": "Ledoit-Wolf HAC delta method (Bartlett, 10 lags)",
+          "n_resamples": null,
+          "block_length": null,
+          "standard_error": 0.0013928462844633176
+        }
+      },
+      "C2": {
+        "bootstrap": {
+          "name_a": "A",
+          "name_b": "B",
+          "sharpe_a": 0.8587480593501717,
+          "sharpe_b": 0.744781015302169,
+          "difference": 0.11396704404800273,
+          "ci_low": 0.00047609393960275836,
+          "ci_high": 0.26743492956925946,
+          "p_value": 0.0861913808619138,
+          "n_obs": 5234,
+          "method": "stationary block bootstrap (Politis-Romano)",
+          "n_resamples": 10000,
+          "block_length": 21,
+          "standard_error": null
+        },
+        "hac": {
+          "name_a": "A",
+          "name_b": "B",
+          "sharpe_a": 0.8588301066497754,
+          "sharpe_b": 0.744852173857269,
+          "difference": 0.11397793279250643,
+          "ci_low": 0.009436936256154424,
+          "ci_high": 0.2185189293288584,
+          "p_value": 0.032606913698827844,
+          "n_obs": 5234,
+          "method": "Ledoit-Wolf HAC delta method (Bartlett, 10 lags)",
+          "n_resamples": null,
+          "block_length": null,
+          "standard_error": 0.053338223233160446
+        }
+      },
+      "C3": false
+    },
+    "D": {
+      "C1": {
+        "bootstrap": {
+          "name_a": "A",
+          "name_b": "B",
+          "sharpe_a": 0.826540243311466,
+          "sharpe_b": 0.8257280750315428,
+          "difference": 0.0008121682799232532,
+          "ci_low": -0.001784863830091392,
+          "ci_high": 0.0034978035502091047,
+          "p_value": 0.5228477152284772,
+          "n_obs": 5234,
+          "method": "stationary block bootstrap (Politis-Romano)",
+          "n_resamples": 10000,
+          "block_length": 21,
+          "standard_error": null
+        },
+        "hac": {
+          "name_a": "A",
+          "name_b": "B",
+          "sharpe_a": 0.8266192133821856,
+          "sharpe_b": 0.8258069675053354,
+          "difference": 0.0008122458768501205,
+          "ci_low": -0.0018468446035881376,
+          "ci_high": 0.0034713363572883783,
+          "p_value": 0.5493791790597105,
+          "n_obs": 5234,
+          "method": "Ledoit-Wolf HAC delta method (Bartlett, 10 lags)",
+          "n_resamples": null,
+          "block_length": null,
+          "standard_error": 0.001356703746299843
+        }
+      },
+      "C2": {
+        "bootstrap": {
+          "name_a": "A",
+          "name_b": "B",
+          "sharpe_a": 0.826540243311466,
+          "sharpe_b": 0.7237800377886909,
+          "difference": 0.1027602055227751,
+          "ci_low": -0.019063493880881608,
+          "ci_high": 0.2640623579142878,
+          "p_value": 0.14828517148285172,
+          "n_obs": 5234,
+          "method": "stationary block bootstrap (Politis-Romano)",
+          "n_resamples": 10000,
+          "block_length": 21,
+          "standard_error": null
+        },
+        "hac": {
+          "name_a": "A",
+          "name_b": "B",
+          "sharpe_a": 0.8266192133821856,
+          "sharpe_b": 0.7238491898490184,
+          "difference": 0.10277002353316725,
+          "ci_low": -0.005992659336393688,
+          "ci_high": 0.2115327064027282,
+          "p_value": 0.0640297097234166,
+          "n_obs": 5234,
+          "method": "Ledoit-Wolf HAC delta method (Bartlett, 10 lags)",
+          "n_resamples": null,
+          "block_length": null,
+          "standard_error": 0.055492184411278546
+        }
+      },
+      "C3": false
+    }
+  },
+  "disclosure": {
+    "symbols_cleared": {
+      "cleared": 220,
+      "total": 942
+    },
+    "a2": {
+      "unclassified_exits": 441,
+      "total_exits": 452,
+      "coverage": {
+        "exits_total": 452,
+        "treated": 8,
+        "by_case": {
+          "case_1": 0,
+          "case_2": 8,
+          "case_4": 0
+        },
+        "unclassified": 441,
+        "quarantined": 3
+      }
+    },
+    "independent_crosscheck": {
+      "compared": 430,
+      "total": 942,
+      "coverage_skew": "The un-compared population is delisted-skewed; Tiingo cannot independently check the half of the panel most exposed to exits."
+    },
+    "universe_asymmetry": {
+      "favourable_columns": 942,
+      "adverse_columns": 950,
+      "statement": "The adverse panel has eight additional Case 2 absent-name columns; they do not exist under the favourable bound."
+    },
+    "prior_trials": {
+      "execution": "2026-09-08 22:34 five-bps execution",
+      "study_id_template": "xsmom-v16-panel-dual-v3-<arm>-20260907",
+      "cost_bps": [
+        5
+      ],
+      "distinct_configurations_per_arm": 16,
+      "raw_rows_per_arm": 352,
+      "treatment": "disclosed prior trial; not counted as this study's result"
+    },
+    "phantom_trials": {
+      "execution": "2026-09-09 03:08 arm-A attempt",
+      "study_id": "xsmom-v16-panel-dual-v4-A-20260909",
+      "status_recorded": "evaluated",
+      "raw_rows": 352,
+      "distinct_configurations": 16,
+      "oos_result": "none; disclosed phantom, not counted as this study's result"
+    },
+    "known_unresolved_defects": {
+      "refused_constituents": 213,
+      "refused_symbol_years": 1574,
+      "quality_flagged_symbols": 67,
+      "volume_flagged_symbols": 25,
+      "pending_A2_amendment_1": {
+        "status": "pending_A2_amendment_1",
+        "symbol_years": 3,
+        "record_ids": [
+          "2013:JEF",
+          "2020:ARNC",
+          "2020:RTN"
+        ]
+      },
+      "excluded_panel_defects": [
+        "CTX",
+        "DF",
+        "IGT",
+        "COG"
+      ]
+    }
+  }
+}

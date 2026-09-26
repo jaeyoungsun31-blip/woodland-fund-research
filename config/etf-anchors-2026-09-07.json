@@ -1,0 +1,243 @@
+{
+  "snapshot": {
+    "as_of": "2026-09-04",
+    "sha256": "7b64be101f62166ed9261a8d51a8894f61310238dfa8d75c2c8e4f3d45c233e6",
+    "field": "adj_close",
+    "hash_format": "sorted date-index CSV; ordered config columns; %.17g; NA; LF; UTF-8",
+    "first": "1998-12-22",
+    "last": "2026-09-04",
+    "rows": 6968,
+    "columns": [
+      "XLB",
+      "XLE",
+      "XLF",
+      "XLI",
+      "XLK",
+      "XLP",
+      "XLU",
+      "XLV",
+      "XLY",
+      "XLRE",
+      "XLC",
+      "SPY",
+      "QQQ",
+      "IWM",
+      "EFA",
+      "EEM",
+      "TLT",
+      "IEF",
+      "GLD",
+      "DBC"
+    ]
+  },
+  "journal": "2026-09-07-phase3-etf-reanchored-results.md",
+  "anchors": [
+    {
+      "old_journal": "2026-09-01-trend-study-v1-results.md",
+      "series": "v1 selection",
+      "metric": "sharpe",
+      "old": 0.612,
+      "new": 0.6130075898959165,
+      "decimals": 3,
+      "reason": "Unavailable earlier input snapshot; superseded by explicitly pinned current data, not reproduced."
+    },
+    {
+      "old_journal": "2026-09-01-trend-study-v1-results.md",
+      "series": "v1 selection",
+      "metric": "turnover",
+      "old": 7.46,
+      "new": 7.45250164612492,
+      "decimals": 2,
+      "reason": "Unavailable earlier input snapshot; superseded by explicitly pinned current data, not reproduced."
+    },
+    {
+      "old_journal": "2026-09-01-trend-v2-ensemble-results.md",
+      "series": "v2 ensemble",
+      "metric": "sharpe",
+      "old": 0.7,
+      "new": 0.7015020998792783,
+      "decimals": 3,
+      "reason": "Unavailable earlier input snapshot; superseded by explicitly pinned current data, not reproduced."
+    },
+    {
+      "old_journal": "2026-09-01-trend-v2-ensemble-results.md",
+      "series": "v2 ensemble",
+      "metric": "turnover",
+      "old": 5.783,
+      "new": 5.779652345351127,
+      "decimals": 3,
+      "reason": "Unavailable earlier input snapshot; superseded by explicitly pinned current data, not reproduced."
+    },
+    {
+      "old_journal": "2026-09-01-trend-v3-voltarget-results.md",
+      "series": "v3 voltarget",
+      "metric": "sharpe",
+      "old": 0.709,
+      "new": 0.7103782678761461,
+      "decimals": 3,
+      "reason": "Unavailable earlier input snapshot; superseded by explicitly pinned current data, not reproduced."
+    },
+    {
+      "old_journal": "2026-09-01-trend-v5-riskweight-results.md",
+      "series": "v5 inverse-vol",
+      "metric": "sharpe",
+      "old": 0.679,
+      "new": 0.6799256120144054,
+      "decimals": 3,
+      "reason": "Unavailable earlier input snapshot; superseded by explicitly pinned current data, not reproduced."
+    },
+    {
+      "old_journal": "2026-09-01-trend-v5-riskweight-results.md",
+      "series": "v5 min-variance",
+      "metric": "sharpe",
+      "old": 0.624,
+      "new": 0.6249628380587942,
+      "decimals": 3,
+      "reason": "Unavailable earlier input snapshot; superseded by explicitly pinned current data, not reproduced."
+    },
+    {
+      "old_journal": "2026-09-02-trend-v6-multiasset-results.md",
+      "series": "v6 multi-asset",
+      "metric": "sharpe",
+      "old": 0.781,
+      "new": 0.787767842778148,
+      "decimals": 3,
+      "reason": "Unavailable earlier input snapshot; superseded by explicitly pinned current data, not reproduced."
+    },
+    {
+      "old_journal": "2026-09-02-trend-v6-multiasset-results.md",
+      "series": "v6 +DBC",
+      "metric": "sharpe",
+      "old": 0.738,
+      "new": 0.7434702338563557,
+      "decimals": 3,
+      "reason": "Unavailable earlier input snapshot; superseded by explicitly pinned current data, not reproduced."
+    },
+    {
+      "old_journal": "2026-09-02-trend-v6-multiasset-results.md",
+      "series": "SPY buy&hold",
+      "metric": "sharpe",
+      "old": 0.66,
+      "new": 0.6623658962204025,
+      "decimals": 3,
+      "reason": "Unavailable earlier input snapshot; superseded by explicitly pinned current data, not reproduced."
+    },
+    {
+      "old_journal": "2026-09-02-trend-v6-multiasset-results.md",
+      "series": "60/40",
+      "metric": "sharpe",
+      "old": 0.806,
+      "new": 0.8097114307559923,
+      "decimals": 3,
+      "reason": "Unavailable earlier input snapshot; superseded by explicitly pinned current data, not reproduced."
+    },
+    {
+      "old_journal": "2026-09-02-trend-v6-multiasset-results.md",
+      "series": "vol-target 60/40",
+      "metric": "sharpe",
+      "old": 0.862,
+      "new": 0.8664881688031314,
+      "decimals": 3,
+      "reason": "Unavailable earlier input snapshot; superseded by explicitly pinned current data, not reproduced."
+    },
+    {
+      "old_journal": "2026-09-02-pipeline-v14-ablation-results.md",
+      "series": "v14 raw v6",
+      "metric": "sharpe",
+      "old": 0.780673,
+      "new": 0.7877678427781478,
+      "decimals": 6,
+      "reason": "Unavailable earlier input snapshot; superseded by explicitly pinned current data, not reproduced."
+    },
+    {
+      "old_journal": "2026-09-02-pipeline-v14-ablation-results.md",
+      "series": "v14 raw v6",
+      "metric": "turnover",
+      "old": 5.153145,
+      "new": 5.150334870337484,
+      "decimals": 6,
+      "reason": "Unavailable earlier input snapshot; superseded by explicitly pinned current data, not reproduced."
+    },
+    {
+      "old_journal": "2026-09-02-pipeline-v14-ablation-results.md",
+      "series": "v14 baseline partial",
+      "metric": "sharpe",
+      "old": 0.804639,
+      "new": 0.8119502681303646,
+      "decimals": 6,
+      "reason": "Unavailable earlier input snapshot; superseded by explicitly pinned current data, not reproduced."
+    },
+    {
+      "old_journal": "2026-09-02-pipeline-v14-ablation-results.md",
+      "series": "v14 baseline partial",
+      "metric": "turnover",
+      "old": 2.772494,
+      "new": 2.770985155904253,
+      "decimals": 6,
+      "reason": "Unavailable earlier input snapshot; superseded by explicitly pinned current data, not reproduced."
+    },
+    {
+      "old_journal": "2026-09-02-pipeline-v14-ablation-results.md",
+      "series": "v14 S1 dispersion",
+      "metric": "sharpe",
+      "old": 0.828044,
+      "new": 0.8355976818787385,
+      "decimals": 6,
+      "reason": "Unavailable earlier input snapshot; superseded by explicitly pinned current data, not reproduced."
+    },
+    {
+      "old_journal": "2026-09-02-pipeline-v14-ablation-results.md",
+      "series": "v14 S2 inverse-vol",
+      "metric": "sharpe",
+      "old": 0.806791,
+      "new": 0.8143248443792307,
+      "decimals": 6,
+      "reason": "Unavailable earlier input snapshot; superseded by explicitly pinned current data, not reproduced."
+    },
+    {
+      "old_journal": "2026-09-02-pipeline-v14-ablation-results.md",
+      "series": "v14 S2 min-variance",
+      "metric": "sharpe",
+      "old": 0.884765,
+      "new": 0.8912582091971509,
+      "decimals": 6,
+      "reason": "Unavailable earlier input snapshot; superseded by explicitly pinned current data, not reproduced."
+    },
+    {
+      "old_journal": "2026-09-02-pipeline-v14-ablation-results.md",
+      "series": "v14 S3 symmetric",
+      "metric": "sharpe",
+      "old": 0.807927,
+      "new": 0.812705546606174,
+      "decimals": 6,
+      "reason": "Unavailable earlier input snapshot; superseded by explicitly pinned current data, not reproduced."
+    },
+    {
+      "old_journal": "2026-09-02-pipeline-v14-ablation-results.md",
+      "series": "v14 S3 asymmetric",
+      "metric": "sharpe",
+      "old": 0.803301,
+      "new": 0.8080555550254845,
+      "decimals": 6,
+      "reason": "Unavailable earlier input snapshot; superseded by explicitly pinned current data, not reproduced."
+    },
+    {
+      "old_journal": "2026-09-02-pipeline-v14-ablation-results.md",
+      "series": "v14 S4 band",
+      "metric": "sharpe",
+      "old": 0.772633,
+      "new": 0.779748464390263,
+      "decimals": 6,
+      "reason": "Unavailable earlier input snapshot; superseded by explicitly pinned current data, not reproduced."
+    },
+    {
+      "old_journal": "2026-09-02-pipeline-v14-ablation-results.md",
+      "series": "v14 S4 partial+band",
+      "metric": "sharpe",
+      "old": 0.810613,
+      "new": 0.8179189635384145,
+      "decimals": 6,
+      "reason": "Unavailable earlier input snapshot; superseded by explicitly pinned current data, not reproduced."
+    }
+  ]
+}

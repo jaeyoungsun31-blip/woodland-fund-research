@@ -1,0 +1,158 @@
+{
+  "version": "2026-09-06.3",
+  "note": "Reviewed identity rules, not inferred suffix conventions. Date bounds are inclusive. BBBY_old is quarantined because its catalog identity contradicts its price history. Local IDs are explicit resolver IDs, not provider-stable IDs.",
+  "quarantine": {
+    "BBBY_old": "Catalog ISIN US0758961009 contradicts price history: 5762/5851 raw closes equal newer BBBY history; only 2/5371 equal BBBYQ. Do not select this file for either entity."
+  },
+  "security_ids": {
+    "BBBYQ": "reviewed:bed-bath-original-common",
+    "BBBY": "reviewed:overstock-beyond-common",
+    "LEH": "reviewed:lehman-original-common",
+    "ENRNQ": "reviewed:enron-original-common",
+    "WAMUQ": "reviewed:washington-mutual-original-common",
+    "WM": "reviewed:waste-management-common"
+  },
+  "rules": [
+    {
+      "symbol": "BBBY",
+      "price_symbol": "BBBYQ",
+      "start": "1992-06-05",
+      "end": "2023-05-02",
+      "names": [
+        "Bed Bath & Beyond Inc",
+        "Bed Bath & Beyond, Inc."
+      ],
+      "exchanges": [
+        "NASDAQ",
+        "US"
+      ],
+      "evidence": "https://www.sec.gov/Archives/edgar/data/886158/000119312523115523/d89202dex991.htm ; EODHD BBBYQ catalog ISIN US0758961009 and 1992-2023 stored history",
+      "expected_identifiers": {
+        "ISIN": "US0758961009"
+      }
+    },
+    {
+      "symbol": "BBBYQ",
+      "price_symbol": "BBBYQ",
+      "start": "1992-06-05",
+      "end": "2023-09-29",
+      "names": [
+        "Bed Bath & Beyond Inc",
+        "Bed Bath & Beyond, Inc."
+      ],
+      "exchanges": [
+        "NASDAQ",
+        "PINK",
+        "OTCMKTS",
+        "US"
+      ],
+      "evidence": "EODHD BBBYQ catalog ISIN US0758961009, archive bounds 1992-06-05 to 2023-09-29; historical archive label, not assertion of contemporaneous ticker",
+      "expected_identifiers": {
+        "ISIN": "US0758961009"
+      }
+    },
+    {
+      "symbol": "BBBY",
+      "price_symbol": "BBBY",
+      "start": "2025-08-29",
+      "end": "9999-12-31",
+      "names": [
+        "Bed Bath & Beyond Inc",
+        "Bed Bath & Beyond, Inc.",
+        "Beyond Inc"
+      ],
+      "exchanges": [
+        "NYSE",
+        "US"
+      ],
+      "evidence": "https://investors.beyond.com/news-events/press-releases/news-details/2025/Beyond-Inc--Changes-Name-to-Bed-Bath--Beyond-Inc--and-Reclaims-Ticker-Symbol-BBBY/default.aspx ; EODHD ISIN US6903701018",
+      "expected_identifiers": {
+        "ISIN": "US6903701018"
+      }
+    },
+    {
+      "symbol": "LEH",
+      "price_symbol": "LEH",
+      "start": "1997-12-31",
+      "end": "2008-09-17",
+      "names": [
+        "Lehman Brothers Holdings Inc"
+      ],
+      "exchanges": [
+        "NYSE",
+        "US"
+      ],
+      "evidence": "User-confirmed historical symbol and EODHD LEH catalog name Lehman Brothers Holdings Inc; stored archive bounds 1997-12-31 to 2008-09-17"
+    },
+    {
+      "symbol": "ENE",
+      "price_symbol": "ENRNQ",
+      "start": "1985-01-01",
+      "end": "2002-01-14",
+      "names": [
+        "Enron Corp",
+        "Enron Corporation"
+      ],
+      "exchanges": [
+        "NYSE",
+        "US"
+      ],
+      "evidence": "User-confirmed ENE to ENRNQ identity; https://www.gao.gov/pdf/product/new-items-d03138 ; NYSE trading suspended January 15, 2002; EODHD ENRNQ name Enron Corp"
+    },
+    {
+      "symbol": "ENRNQ",
+      "price_symbol": "ENRNQ",
+      "start": "1997-12-31",
+      "end": "2004-11-17",
+      "names": [
+        "Enron Corp",
+        "Enron Corporation"
+      ],
+      "exchanges": [
+        "NYSE",
+        "US",
+        "PINK",
+        "OTCMKTS"
+      ],
+      "evidence": "EODHD ENRNQ catalog name Enron Corp and stored archive bounds; historical archive label"
+    },
+    {
+      "symbol": "WM",
+      "price_symbol": "WAMUQ",
+      "start": "1983-01-01",
+      "end": "2008-09-25",
+      "names": [
+        "Washington Mutual Inc",
+        "Washington Mutual"
+      ],
+      "exchanges": [
+        "NYSE",
+        "US"
+      ],
+      "evidence": "User-confirmed WM to WAMUQ identity; https://www.fdic.gov/resources/resolutions/bank-failures/failed-bank-list/wamu.html ; https://www.sec.gov/Archives/edgar/data/933136/000090951812000125/mm03-2312_8ke995.htm ; conservative cutoff, transition dates require separate review",
+      "expected_identifiers": {
+        "ISIN": "US9393221034"
+      }
+    },
+    {
+      "symbol": "WM",
+      "price_symbol": "WM",
+      "start": "2009-08-05",
+      "end": "9999-12-31",
+      "names": [
+        "Waste Management Inc",
+        "Waste Management"
+      ],
+      "exchanges": [
+        "NYSE",
+        "US"
+      ],
+      "evidence": "https://investors.wm.com/news-releases/news-release-details/waste-management-announces-ticker-change-wm/",
+      "expected_identifiers": {
+        "ISIN": "US94106L1098"
+      }
+    }
+  ],
+  "archive_policy": "Exclude all _old and numbered _old locators; never infer a replacement from suffix.",
+  "wm_price_identity": "WM stored history is Waste Management 1988-2026 per user verification. Historical constituent ticker WM still requires period/company disambiguation from Washington Mutual; no series splice."
+}

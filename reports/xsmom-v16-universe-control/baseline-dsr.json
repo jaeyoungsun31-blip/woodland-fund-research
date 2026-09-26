@@ -1,0 +1,48 @@
+{
+  "baseline": {
+    "strategy": "naive momentum",
+    "cost_bps": 25.0,
+    "return_artifact": "universe-control/momentum-25-returns.csv",
+    "n_trials": 1,
+    "n_obs": 5234,
+    "dsr": 0.9802328037046162,
+    "psr_vs_zero": 0.9802328037046162,
+    "sr0_annual": 0.0,
+    "skew": -0.3419148477394879,
+    "excess_kurtosis": 10.256189024487165
+  },
+  "penalized_comparison": {
+    "return_artifact": "summary.json",
+    "n_trials": 80,
+    "dsr": 0.007457348896736604,
+    "psr_vs_zero": 0.9157718524975484,
+    "sr0_annual": 0.8372082152767523,
+    "skew": -0.025656948956587888,
+    "excess_kurtosis": 12.846199960140229
+  },
+  "risk_free": {
+    "calendar_first": "2005-01-07",
+    "calendar_last": "2026-06-30",
+    "n_bars": 5234,
+    "n_carried_forward": 0
+  },
+  "caveat": {
+    "status": "DSR FIGURE WITHDRAWN FROM CITATION",
+    "summary": "n_trials=1 is defensible against this project's own search but not against inherited literature search. Cite psr_vs_zero, not dsr.",
+    "ground_1_inherited_search": {
+      "verdict": "STANDS, strengthened",
+      "detail": "The momentum feature is mom_12_2 (woodland/signals/costaware.py:8 and :24). This is the canonical Jegadeesh-Titman / Fama-French specification, adopted without reading the literature, so the search that produced it is unknown and uncharged. Strengthened by xsmom-v15-holding's use of 10_Portfolios_Prior_12_2_Daily_CSV.zip: the benchmark dataset is itself built on 12-2, so it cannot serve as independent evidence for a 12-2 signal."
+    },
+    "ground_2_own_prior_search": {
+      "verdict": "WITHDRAWN",
+      "detail": "Traced 2026-09-10. formation_days is hardcoded month-end at costaware_panel.py:147, derived from the index, not a searchable parameter. xsmom-v15-holding ran on Fama-French deciles 1932-2026 (24,434 OOS bars), not the EODHD panel (5,234 OOS bars); its results entry states three times that nothing was promoted and no frequency was selected; and the four frequencies were statistically indistinguishable (10bps Sharpe 0.789/0.786/0.794/0.788, spread 0.008, overlapping intervals). A dimension that does not move the answer cannot be overfit."
+    },
+    "era_finding_not_previously_carried_forward": "journal/2026-09-03-xsmom-v15-holding-results.md reports that in 1980-2026 every registered bootstrap interval versus equal-weight-ten included zero, including gross, at every frequency; pre-1980 intervals excluded zero. The v16 panel spans 1999-2026, entirely inside that window. v16's failure is a second independent confirmation of a finding this project already held, on unrelated data, by a different method. This connection was not made before v16 ran.",
+    "what_still_stands": [
+      "psr_vs_zero = 0.9802 makes no claim about search breadth. Cite this, not dsr.",
+      "C2 (penalized minus naive momentum = -0.212, CI [-0.413, -0.026], p = 0.033) is a paired comparison on identical data, unaffected by baseline specification choice."
+    ],
+    "to_resolve": "Any deflated figure for this baseline requires a declared trial budget that accounts for inherited literature search. Ground 2 no longer contributes.",
+    "recorded_by": "planning, 2026-09-10"
+  }
+}

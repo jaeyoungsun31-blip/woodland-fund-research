@@ -1,0 +1,43 @@
+{
+  "release": "Open Source Asset Pricing, October 2025 release (v2.0.0)",
+  "data_page": "https://www.openassetpricing.com/data/",
+  "release_folder": "https://drive.google.com/drive/folders/1qQDuTsnyvWfEJR6nPBQZ8xxlq6bkLG_y",
+  "retrieved_utc": "2026-09-26T01:07:24+00:00",
+  "seconds": 0.0,
+  "files": [
+    {
+      "file": "raw/SignalDoc.csv",
+      "drive_id": null,
+      "view_url": "https://raw.githubusercontent.com/OpenSourceAP/CrossSection/v2.0.0/SignalDoc.csv",
+      "download_url": "https://raw.githubusercontent.com/OpenSourceAP/CrossSection/v2.0.0/SignalDoc.csv",
+      "bytes": 181712,
+      "sha256": "f6c055120bad7afe97c16e23e0f49bce0982269026605a955e8064bd661cf415",
+      "acquisition": "Fetched by fetch.py from the v2.0.0 code tag: both Drive copies returned 'Quota exceeded' on 2026-09-26."
+    },
+    {
+      "file": "raw/PredictorLSretWide.csv",
+      "drive_id": "10sOryk_ddjkXagaajTKUk1nwJs2ZLRiI",
+      "view_url": "https://drive.google.com/file/d/10sOryk_ddjkXagaajTKUk1nwJs2ZLRiI/view",
+      "download_url": "https://drive.usercontent.google.com/download?id=10sOryk_ddjkXagaajTKUk1nwJs2ZLRiI&export=download&confirm=t",
+      "bytes": 3293172,
+      "sha256": "79aa0896d79924e1efa83f9afe51a3b4ce94137adfd2c5c3fd2d5d350532ee18",
+      "acquisition": "Drive refused anonymous download ('Quota exceeded'); downloaded by Jaeyoung in a signed-in browser on 2026-09-26 and moved into raw/. Hash recorded by fetch.py."
+    },
+    {
+      "file": "raw/PredictorAltPorts_LiqScreen_VWforce.zip",
+      "drive_id": "1KZE3FgBxFPaNOyxoRw63ubZHOlkR9kZW",
+      "view_url": "https://drive.google.com/file/d/1KZE3FgBxFPaNOyxoRw63ubZHOlkR9kZW/view",
+      "download_url": "https://drive.usercontent.google.com/download?id=1KZE3FgBxFPaNOyxoRw63ubZHOlkR9kZW&export=download&confirm=t",
+      "bytes": 25962554,
+      "sha256": "53d3ae1f3de7a17d051de0125da2c42e4d4cf664faf6e4f6cfdd3b4994675a2a",
+      "acquisition": "Same as PredictorLSretWide.csv: browser download by Jaeyoung on 2026-09-26."
+    },
+    {
+      "file": "raw/PredictorAltPorts_LiqScreen_VWforce.csv",
+      "extracted_from": "raw/PredictorAltPorts_LiqScreen_VWforce.zip",
+      "bytes": 78178003,
+      "sha256": "b7b9e144482e386116c81873fb6dbd45028498eecef30be4a588375bb1c4c1e9"
+    }
+  ],
+  "retrieved_utc_note": "retrieved_utc is when fetch.py last ran and hashed the files, not the browser download time."
+}

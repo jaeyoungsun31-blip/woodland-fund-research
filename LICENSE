@@ -1,0 +1,67 @@
+The Woodland Fund research record — licensing
+
+This repository is licensed in three parts.
+
+1. CODE — MIT License
+
+   Applies to all source code, including woodland/, scripts/, tests/,
+   explore/**/*.py, and configuration files.
+
+   Copyright (c) 2026 Jaeyoung Sun
+
+   Permission is hereby granted, free of charge, to any person obtaining a
+   copy of this software and associated documentation files (the
+   "Software"), to deal in the Software without restriction, including
+   without limitation the rights to use, copy, modify, merge, publish,
+   distribute, sublicense, and/or sell copies of the Software, and to permit
+   persons to whom the Software is furnished to do so, subject to the
+   following conditions:
+
+   The above copyright notice and this permission notice shall be included
+   in all copies or substantial portions of the Software.
+
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+   OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+   MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+   NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+   DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+   OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+   USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+2. PROSE — Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+   Applies to the written material: writeup/, journal/*.md, DESIGN.md,
+   README.md, CLAUDE.md, and the Markdown reports under explore/ and
+   reports/.
+
+   Copyright (c) 2026 Jaeyoung Sun. You may share and adapt this material
+   for any purpose, provided you give appropriate credit, provide a link to
+   the licence, and indicate if changes were made. Full terms:
+   https://creativecommons.org/licenses/by/4.0/legalcode
+
+3. THIRD-PARTY DATA — NO LICENCE GRANTED
+
+   No licence is granted for any third-party data, and nothing in this
+   repository transfers rights in it. This includes data from, or derived
+   from:
+
+   - EOD Historical Data (EODHD) end-of-day prices and catalogues;
+   - Tiingo end-of-day prices;
+   - Kalshi market data (public API);
+   - Open Source Asset Pricing (OSAP) portfolio returns and signal
+     documentation, by Andrew Y. Chen and Tom Zimmermann.
+
+   Raw third-party data is not included. Derived statistics that appear in
+   reports (aggregate returns, counts, test statistics) are provided for
+   research reference only, and remain subject to each provider's terms. To
+   reproduce any result, obtain the data from the provider under your own
+   licence or account.
+
+   Results based on OSAP data must cite:
+   Chen, A. Y., and Zimmermann, T. (2022). Open Source Cross-Sectional Asset
+   Pricing. Critical Finance Review, 11(2), 207-264.
+
+   Fama-French factor and portfolio data come from the Kenneth R. French
+   Data Library and are likewise not licensed by this repository.
+
+Nothing in this repository is investment advice.

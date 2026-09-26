@@ -1,0 +1,90 @@
+# The Woodland Fund — universe & backtest configuration
+# Liquid US ETF universe (see DESIGN.md §5). ETFs sidestep single-stock
+# survivorship bias: these are the actual tradeable instruments.
+
+universe:
+  sectors:            # SPDR sector ETFs
+    - XLB             # materials        (1998-)
+    - XLE             # energy           (1998-)
+    - XLF             # financials       (1998-)
+    - XLI             # industrials      (1998-)
+    - XLK             # technology       (1998-)
+    - XLP             # staples          (1998-)
+    - XLU             # utilities        (1998-)
+    - XLV             # health care      (1998-)
+    - XLY             # discretionary    (1998-)
+    - XLRE            # real estate      (2015-) — short history, excluded from long backtests
+    - XLC             # communications   (2018-) — short history, excluded from long backtests
+  broad:
+    - SPY             # S&P 500
+    - QQQ             # Nasdaq 100
+    - IWM             # Russell 2000
+    - EFA             # developed ex-US
+    - EEM             # emerging markets
+  defensive:
+    - TLT             # 20+yr treasuries
+    - IEF             # 7-10yr treasuries (also the cash-proxy / risk-off leg)
+    - GLD             # gold
+    - DBC             # commodities      (2006-)
+
+data:
+  as_of: "2026-09-04"      # inclusive frozen research snapshot; never a live-feed cutoff
+  start: "1998-12-22"      # first date all nine original sector ETFs trade
+  primary_source: yahoo    # unadjusted OHLCV + adjusted close in one request
+
+  # Independent second source, cross-checked on every ingest (DESIGN.md §5 as
+  # amended 2026-09-01). Tiingo was chosen over Alpaca because its 20+ yrs of
+  # adjusted EOD cover the FULL backtest period; Alpaca's shorter free history
+  # would leave the early years unguarded. Stooq is retired behind an anti-bot
+  # wall. Key: TIINGO_API_KEY in .env (gitignored, never committed).
+  # See journal/2026-09-01-second-source-decision.md
+  crosscheck_source: tiingo
+  # Planning decision 2026-09-01: >2% is a hard failure; >50bps is monitored
+  # and reported but does not itself change the verdict.
+  crosscheck_fail_tolerance: 0.02
+  crosscheck_monitor_tolerance: 0.005
+  # Research is bound to this read-only artifact.  Its directory name is the
+  # observed content hash, not acceptance of the unresolved replacement anchors.
+  store: data/snapshots/etf-4c6a36b8c1e52f2cc50dca437ff4d892dc21a87c96b18ff08de70eb85e84d901
+  # Every research read of this store recomputes and must match this artifact hash.
+  research_snapshot_sha256: 4c6a36b8c1e52f2cc50dca437ff4d892dc21a87c96b18ff08de70eb85e84d901
+  # Pinned Ken French daily factors artifact copied into the frozen research store.
+  risk_free_sha256: ae34413413be72b85fcddfcf3a384ea6a5b66097b2887726dae4380239b763d7
+  # Raw SHA-256 pins for ignored v16 and universe-control inputs. The initial
+  # panel uses its recorded study hash; a changed local copy must be refused.
+  pinned_input_sha256:
+    data/snapshots/etf-4c6a36b8c1e52f2cc50dca437ff4d892dc21a87c96b18ff08de70eb85e84d901/DBC.parquet: e93ab84f491b3175ea5a6507484a804149e7d12109fe392a3e29eceee66e1c07
+    data/snapshots/etf-4c6a36b8c1e52f2cc50dca437ff4d892dc21a87c96b18ff08de70eb85e84d901/EEM.parquet: 587bce086b8cf858241bcf0d13053bc7bc66cd6795ae3875329432c33956cbd0
+    data/snapshots/etf-4c6a36b8c1e52f2cc50dca437ff4d892dc21a87c96b18ff08de70eb85e84d901/EFA.parquet: 0bd38feed58096c2da1963abe93463f92c52c56b086a1822c3fe33fff184bace
+    data/snapshots/etf-4c6a36b8c1e52f2cc50dca437ff4d892dc21a87c96b18ff08de70eb85e84d901/GLD.parquet: 798ba66932a437654f3b7af310c0bd60351b7048a50b51d27fad423d5e1e01ae
+    data/snapshots/etf-4c6a36b8c1e52f2cc50dca437ff4d892dc21a87c96b18ff08de70eb85e84d901/IEF.parquet: 6a8a1c1eecdbea91919999c2085b4dd81fc7b62dfa4afd4242b4cd883b29f316
+    data/snapshots/etf-4c6a36b8c1e52f2cc50dca437ff4d892dc21a87c96b18ff08de70eb85e84d901/IWM.parquet: 8f693285b23ffbc936ae8ec1a948c38d4e04c54cd5c1955106d01c42a47fbc47
+    data/snapshots/etf-4c6a36b8c1e52f2cc50dca437ff4d892dc21a87c96b18ff08de70eb85e84d901/QQQ.parquet: fb0696e2daaa156162cd1c2c94213c799fb5d80b77383f17da31508c695e659f
+    data/snapshots/etf-4c6a36b8c1e52f2cc50dca437ff4d892dc21a87c96b18ff08de70eb85e84d901/SPY.parquet: 9226ca17191f2457eca8cb0ec38c04c7fded8cd886ab185d2e03f8f483962888
+    data/snapshots/etf-4c6a36b8c1e52f2cc50dca437ff4d892dc21a87c96b18ff08de70eb85e84d901/TLT.parquet: f2e6c92e22d57b313799630b9a7afdce9d5550a44ec1cf84af5a8ced5e0ea252
+    data/snapshots/etf-4c6a36b8c1e52f2cc50dca437ff4d892dc21a87c96b18ff08de70eb85e84d901/XLB.parquet: 985ce3470cf017b85c0045311523ad645117198cd235d908b41b04d4dcf248ab
+    data/snapshots/etf-4c6a36b8c1e52f2cc50dca437ff4d892dc21a87c96b18ff08de70eb85e84d901/XLC.parquet: 64469139b69a7afd69ad74a42fd974bcf9ab9f4276f2fe7c7413bfc09ba1e04a
+    data/snapshots/etf-4c6a36b8c1e52f2cc50dca437ff4d892dc21a87c96b18ff08de70eb85e84d901/XLE.parquet: 9958b6ff4ecc53033760001f511f9f3553ee29a6386391a11e230002fee1303d
+    data/snapshots/etf-4c6a36b8c1e52f2cc50dca437ff4d892dc21a87c96b18ff08de70eb85e84d901/XLF.parquet: 89ff3e6b6341aab4147d0927161126ad85503f02451bb7116d9a87a5fd3cebab
+    data/snapshots/etf-4c6a36b8c1e52f2cc50dca437ff4d892dc21a87c96b18ff08de70eb85e84d901/XLI.parquet: 60309a12bd51606378568586d768eb230ba5a1ac4de95f5b1ecab0dcf4adca61
+    data/snapshots/etf-4c6a36b8c1e52f2cc50dca437ff4d892dc21a87c96b18ff08de70eb85e84d901/XLK.parquet: 9da721910915cea4417e985d185de2a4335aa2b974801a6fbcf054e41bed9cb5
+    data/snapshots/etf-4c6a36b8c1e52f2cc50dca437ff4d892dc21a87c96b18ff08de70eb85e84d901/XLP.parquet: 4fe9919324646040f2bcbce117efe1b53c312db61278e6817a02dcc7b5b31fd3
+    data/snapshots/etf-4c6a36b8c1e52f2cc50dca437ff4d892dc21a87c96b18ff08de70eb85e84d901/XLRE.parquet: 98115c019801513fbad186d1246bb0a28b1fc43655740040c795e3055a0fd45a
+    data/snapshots/etf-4c6a36b8c1e52f2cc50dca437ff4d892dc21a87c96b18ff08de70eb85e84d901/XLU.parquet: b9e6df858432a1e5d9ce777bbc3775518f76440436bb4ea279b53fc2394a38ea
+    data/snapshots/etf-4c6a36b8c1e52f2cc50dca437ff4d892dc21a87c96b18ff08de70eb85e84d901/XLV.parquet: 8dd0a3951693c891134f169f45b639461a137330d62e15b69bfd6596d3d31e55
+    data/snapshots/etf-4c6a36b8c1e52f2cc50dca437ff4d892dc21a87c96b18ff08de70eb85e84d901/XLY.parquet: 606f184f73d0998a570737f0663e4c2a86d8ff8bed7172b3b154b36a5b259a9b
+    data/SPY.parquet: c74e439995150b7c62497bde09b64e54353e6849fd3cb47f0a60898d1647164f
+    reports/security-resolver/2026-09-07-constituent-panel/membership-mask.parquet: decdd7dfd9123dca73f9aa6af148e889e53ea5afcd250f06ccc4b400af971400
+    reports/security-resolver/2026-09-07-constituent-panel/panel-returns.parquet: 47d4eee2c5c90a37a731d985148efb85058fae40dc2202a5f4953d04884fcaf5
+    reports/security-resolver/2026-09-07-constituent-panel/panel-returns-a2-adverse.parquet: 789fbd053d70ad95326f31c2bfd0ab85b19f1e9b6af833bb8e4175ff8e1a9cfb
+    reports/security-resolver/2026-09-07-constituent-panel/panel-returns-a2-favourable.parquet: 575d1d08c16b4dcf68a9b5eaed304e20fdd82a80ca9430566ce81af81189aeba
+    reports/security-resolver/2026-09-07-constituent-panel/panel-summary.json: 1d422bc86cb5bd15fe60863ed01094aabe13a2a388513351cc2aaae5a77a60ec
+    reports/security-resolver/2026-09-07-missed-event-screen/missed-event-candidates.csv: 4c9a87a18cbd3ec28d3fbbcd59bc55f8a7eeec8e21637d0850c01c65ef1f57d4
+    reports/security-resolver/2026-09-07-tiingo-crosscheck/crosscheck.csv: 19b37a79592b5a2dda7a2c5d25459ba3a495ce038fe676524200a789e0010ba1
+    reports/xsmom-v16-panel/pinned-run/inputs.json: 10d324a444425bf7347b8aaba384637f6106f532a1c1becb45778c058bc43619
+  # The operational cycle refreshes this separate mutable working store only.
+  live_store: data/
+
+backtest:
+  cost_bps_scenarios: [0, 5, 10]   # every result reported at all three (DESIGN.md §5)
+  default_cost_bps: 5

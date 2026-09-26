@@ -1,0 +1,73 @@
+# data store is rebuildable — never commit market data
+data/
+*.parquet
+reports/*
+!reports/cleared-subset-2026-09-07/
+!reports/xsmom-v16-dual-run/
+
+# python
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+.pytest_cache/
+
+# os
+.DS_Store
+
+# secrets — Alpaca keys etc. live here, never in git
+.env
+secrets/
+
+# agent tool state — never part of the research record
+.claude-flow/
+_to_delete/
+
+# agent tool state — never part of the research record
+.claude/
+.swarm/
+graphify-out/
+ruvector.db
+
+# downloaded Ken French archives — market data, rebuildable from the source URL
+/*_CSV.zip
+
+# agent tool state
+.continue/
+
+# git litter from the mount, not research material
+scripts/Archive.zip
+!reports/xsmom-v16-universe-control/
+!reports/defect-excluded-universe-2026-09-09/
+
+# Tiingo-derived per-event values; kept local under Tiingo's data terms
+explore/insiders/tiingo_validation_events.csv
+
+# explore/insiders: downloaded Ken French factor archives and the SEC source page.
+# Public, and rebuildable from the URLs and SHA-256 hashes in
+# french_archives_manifest.json; not research output.
+explore/insiders/*.zip
+explore/insiders/source.html
+
+# explore/insiders: generated CSV/JSON outputs, rebuildable by the committed
+# scripts. Kept: the three small Tiingo validation summaries and the archive
+# manifest, which the committed reports cite.
+explore/insiders/*.csv
+explore/insiders/*.json
+!explore/insiders/tiingo_validation_summary.csv
+!explore/insiders/tiingo_validation_splits.csv
+!explore/insiders/tiingo_validation_missing_symbols.csv
+!explore/insiders/french_archives_manifest.json
+
+# explore/deletions: generated outputs of phase1.py, rebuildable.
+explore/deletions/*.csv
+explore/deletions/*.json
+
+# explore/kalshi: raw Kalshi and MLB API responses and caches (~40 MB),
+# regenerable by the scripts. Only top-level code and write-ups are tracked.
+explore/kalshi/*
+!explore/kalshi/*.py
+!explore/kalshi/*.md
+
+# explore/osap: raw Open Source Asset Pricing downloads (rebuildable via fetch.py)
+explore/osap/raw/

@@ -1,0 +1,9 @@
+{
+  "decision": "accept-under-declared-tolerance",
+  "tolerance": "published precision (half-last-digit at each anchor's declared precision)",
+  "basis": "published precision (half-last-digit at each anchor's declared precision)",
+  "supersedes": "journal/2026-09-08-planning-decision-etf-anchor-tolerance.md",
+  "source_journal": "journal/2026-09-08-planning-decision-anchor-tolerance-published-precision.md",
+  "signed_by": "Jaeyoung / planning",
+  "signed_at": "2026-09-08"
+}
